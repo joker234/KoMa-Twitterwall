@@ -30,13 +30,10 @@ else
  function start_reload_content()
  {
     countdown(3);
-    start_timeout(function(){countdown(2)}, 1000);
-    start_timeout("reload_content", 2000);
  }
 
  function reload_content()
  {
-    countdown(0);
     xmlhttp.open("GET","getcontent.php",false);
     xmlhttp.send();
     var result = xmlhttp.responseText;
@@ -49,9 +46,15 @@ else
  function countdown(param)
  {
    if(param > 0)
-    countdown_span.innerHTML = "Reloading in "+param+"...";
+   {
+     countdown_span.innerHTML = "Reloading in "+param+"...";
+     setTimeout(function(){countdown(param-1)}, 1000);
+   }
    else
-    countdown_span.innerHTML = "";
+   {
+     countdown_span.innerHTML = "";
+     reload_content();
+   }
  }
 </script>
 </head>
@@ -59,7 +62,9 @@ else
 <div id="content">
 
 </div>
-<div class="bottom" id="countdown"></div>
+<div class="bottom">
+ <div id="countdown"></div>
+</div>
 </body>
 </html>
 
