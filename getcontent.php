@@ -74,7 +74,7 @@ function fancy_tweet_display($tweet)
                 }
                 else
                 {
-                    $media = qr_code($url, 200, 200).'<br />Scanne mich!';
+                    $media = qr_code($tweet->entities->urls[0]->display_url, 200, 200).'<br />'.$url;
                 }
             }
         }
