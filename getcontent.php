@@ -33,12 +33,17 @@ for ($i = 0; $i < count($json->results); $i++)
     array_push($tweets, $json->results[$i]);
 }
 
-$play_video = true; 
-//for($i = 0; $i < count($tweets); ++$i)
-for($i = 0; $i < 10; ++$i)
-    echo fancy_tweet_display($tweets[$i]);
 
-function fancy_tweet_display($tweet)
+echo "<div class='left'>";
+for($i = 0; $i < count($tweets); $i = $i+2)
+    echo fancy_tweet_display($tweets[$i], false);
+echo "</div>";
+echo "<div class='right'>";
+for($i = 1; $i < count($tweets); $i = $i+2)
+    echo fancy_tweet_display($tweets[$i], true);
+echo "</div>";
+
+function fancy_tweet_display($tweet, $orientation_right)
 {
     $media = '';
     $qrcode = '';
