@@ -52,7 +52,7 @@ function fancy_tweet_display($tweet)
     $qrcode = '';
 
     if (isset($tweet->entities->media[0]->media_url)) {
-        $media = "<br/><center><img src='".$tweet->entities->media[0]->media_url."' /></center>";
+        $media = "<img src='".$tweet->entities->media[0]->media_url."' />";
     }
     else
     {
@@ -61,7 +61,7 @@ function fancy_tweet_display($tweet)
             $url = $tweet->entities->urls[0]->expanded_url;
             $fileending = strtolower(substr($url, strlen($url)-4, 4));
             if ($fileending == ".gif" || $fileending == "jpeg" || $fileending == ".jpg" || $fileending == ".png")
-		        $media .= "<br/><center><img src='".$url."' /><center>";
+		        $media .= "<img src='".$url."' />";
             else
             {
                 $s = cutstr($url, 'http://');
@@ -69,7 +69,7 @@ function fancy_tweet_display($tweet)
                 if (substr($s, 0, strlen('youtu.be/')) == 'youtu.be/')
                 {
                     $s = cutstr($s, 'youtu.be/');
-                    $media .= "<br/><center><img src='http://img.youtube.com/vi/".$s."/mqdefault.jpg' /></center>";
+                    $media .= "<img src='http://img.youtube.com/vi/".$s."/mqdefault.jpg' />";
                     $play_video=false;
                 }
                 else
@@ -91,7 +91,7 @@ function fancy_tweet_display($tweet)
     $result .="<div class='tweettext'>";
     $result .=utf8_decode($tweet->text)."</div></div>";
 
-    $result .= $media;
+    $result .= "<center><br />".$media."</center>";
 
     $result .="</div>";
 
