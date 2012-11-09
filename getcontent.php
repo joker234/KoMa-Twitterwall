@@ -47,38 +47,56 @@ for($i = 0; $i < 10; ++$i)
 function fancy_tweet_display($tweet)
 {
     global $play_video;
+
+    $media = '';
+    $qrcode = '';
+
+    if (isset($tweet->entities->media[0]->media_url)) {
+        $media = "<br/><center><img src='".$tweet->entities->media[0]->media_url."' /></center>";
+    }
+    else
+    {
+        if (count($tweet->entities->urls) > 0)
+        {
+            $url = $tweet->entities->urls[0]->expanded_url;
+            $fileending = strtolower(substr($url, strlen($url)-4, 4));
+            if ($fileending == ".gif" || $fileending == "jpeg" || $fileending == ".jpg" || $fileending == ".png")
+		        $media .= "<br/><center><img src='".$url."' /><center>";
+            else
+            {
+                $s = cutstr($url, 'http://');
+                $s = cutstr($s, 'www.');
+                if (substr($s, 0, strlen('youtu.be/')) == 'youtu.be/')
+                {
+                    $s = cutstr($s, 'youtu.be/');
+                    $media .= "<br/><center><img src='http://img.youtube.com/vi/".$s."/mqdefault.jpg' /></center>";
+                    $play_video=false;
+                }
+                else
+                {
+                    $qrcode = qr_code($url, 250, 250);
+                }
+            }
+        }
+    }
+
     $result ="<div class='tweet'><img src='".$tweet->profile_image_url;
     $result .="' align='left' width='48' height='48' hspace='5' /><div class='content'>";    
     $result .=utf8_decode($tweet->from_user_name)." (@".$tweet->from_user.")";
     $datum = $tweet->created_at;
     $datum = new DateTime($datum);
     $datum->setTimezone(new DateTimeZone('Europe/Berlin'));
-    $result .="<span class='date' >".$datum->format('D H:i:s')."</span>";
+    $result .="<span class='date' >".$datum->format('D H:i:s');
+    if(!empty($qrcode))
+    {
+        $result .= "<br />".$qrcode;
+    }
+    $result .= "</span>";
     $result .="<div class='tweettext'>";
     $result .=utf8_decode($tweet->text)."</div></div>";
-    if (isset($tweet->entities->media[0]->media_url)) {
-        $result .="<br/><center><img src='".$tweet->entities->media[0]->media_url."' /></center>";
-    }
-    else {
-        if (count($tweet->entities->urls) > 0) {
-            $url = $tweet->entities->urls[0]->expanded_url;
-            $fileending = strtolower(substr($url, strlen($url)-4, 4));
-            if ($fileending == ".gif" || $fileending == "jpeg" || $fileending == ".jpg" || $fileending == ".png")
-		$result .= "<br/><center><img src='".$url."' /><center>";
-            $s = cutstr($url, 'http://');
-            $s = cutstr($s, 'www.');
-            if (substr($s, 0, strlen('youtu.be/')) == 'youtu.be/') {
-                $s = cutstr($s, 'youtu.be/');
-            $result .= "<br/><center><img src='http://img.youtube.com/vi/".$s."/mqdefault.jpg' /></center>";
-            $play_video=false;
-            }
-            
-       
-    }}
-   // $datum = $json->results[$i]->created_at;
-   // $datum = date_create_from_format('D, d M Y H:i:s Z', $datum);
-   // $datum = date_timezone_set($datum, new DateTimeZone('Europe/Berlin'));
-   // print_r(date_get_last_errors());
+
+    $result .= $media;
+
     $result .="</div>";
 
     return $result;
@@ -90,6 +108,11 @@ function cutstr($s, $p)
                 $s = substr($s, strlen($p), strlen($s)-strlen($p));
             }
 	return $s;
+}
+
+function qr_code($link, $width=150, $height=150)
+{
+    return '<img src="https://chart.googleapis.com/chart?cht=qr&chl='.$link.'&chs='.$width.'x'.$height.'&chld=L|0&choe=UTF-8" />';
 }
 
 ?>
