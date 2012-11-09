@@ -7,7 +7,7 @@
 
 // Suche nach Hashtag...
 $hashtag="kif405";
-$APIurl = "http://search.twitter.com/search.json?q=%23kif405+exclude:retweets&include_entities=true&rrp=10&page=1";
+$APIurl = "http://search.twitter.com/search.json?q=%23".$hashtag."%20OR%20@KIFORGABUERO%20+exclude:retweets&include_entities=true&rrp=10&page=1";
 
 header('Content-Type: text/html; charset=ISO-8859-1');
 
@@ -40,8 +40,6 @@ for($i = 0; $i < 10; ++$i)
 
 function fancy_tweet_display($tweet)
 {
-    global $play_video;
-
     $media = '';
     $qrcode = '';
 
