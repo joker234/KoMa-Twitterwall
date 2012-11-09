@@ -7,16 +7,10 @@
 
 // Suche nach Hashtag...
 $hashtag="kif405";
-$APIurl = "http://search.twitter.com/search.json";
+$APIurl = "http://search.twitter.com/search.json?q=%23".$hashtag."%20OR%20@KIFORGABUERO%20+exclude:retweets&include_entities=true&rrp=10&page=1";
 
 header('Content-Type: text/html; charset=ISO-8859-1');
 
-// Refreh-Url mit since_id ggf aus Session laden
-$param="?q=%23".$hashtag."+exclude:retweets";    
-
-$APIurl.=$param."&include_entities=true&rpp=10&page=1";
-
-// weitere Paramter fÃƒÂ¼r die Suche siehe
 // https://dev.twitter.com/docs/using-search
 
 // GET vorbereiten
@@ -39,15 +33,18 @@ for ($i = 0; $i < count($json->results); $i++)
     array_push($tweets, $json->results[$i]);
 }
 
-$play_video = true; 
-//for($i = 0; $i < count($tweets); ++$i)
-for($i = 0; $i < 10; ++$i)
-    echo fancy_tweet_display($tweets[$i]);
 
-function fancy_tweet_display($tweet)
+echo "<div class='left'>";
+for($i = 0; $i < count($tweets); $i = $i+2)
+    echo fancy_tweet_display($tweets[$i], false);
+echo "</div>";
+echo "<div class='right'>";
+for($i = 1; $i < count($tweets); $i = $i+2)
+    echo fancy_tweet_display($tweets[$i], true);
+echo "</div>";
+
+function fancy_tweet_display($tweet, $orientation_right)
 {
-    global $play_video;
-
     $media = '';
     $qrcode = '';
 
@@ -108,7 +105,7 @@ function cutstr($s, $p)
 
 function qr_code($link, $width=150, $height=150)
 {
-    return '<img src="https://chart.googleapis.com/chart?cht=qr&chl='.$link.'&chs='.$width.'x'.$height.'&chld=L|0&choe=UTF-8" />';
+    return '<img src="https://chart.googleapis.com/chart?cht=qr&chl='.$link.'&chs='.$width.'x'.$height.'&chld=L|1&choe=UTF-8" />';
 }
 
 ?>
