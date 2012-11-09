@@ -7,6 +7,7 @@
 <script type="text/javascript">
  var poll_delay = 10;
  var content_div;
+ var countdown_span;
 
 var xmlhttp;
 if (window.XMLHttpRequest)
@@ -21,27 +22,46 @@ else
  function start_reloading()
  {
    content_div = document.getElementById("content");
+   countdown_span = document.getElementById("countdown");
    reload_content();
-   window.setInterval("reload_content()", poll_delay * 1000);
+   window.setInterval("start_reload_content()", poll_delay * 1000);
+ }
+
+ function start_reload_content()
+ {
+    countdown(3);
+    start_timeout(function(){countdown(2)}, 100);
+    start_timeout("reload_content", 200);
  }
 
  function reload_content()
  {
-   xmlhttp.open("GET","getcontent.php",false);
-   xmlhttp.send();
-   var result = xmlhttp.responseText;
-   if(result.length)
-   {
-     content_div.innerHTML = result;
-   }
+    countdown(0);
+    xmlhttp.open("GET","getcontent.php",false);
+    xmlhttp.send();
+    var result = xmlhttp.responseText;
+    if(result.length)
+    {
+      content_div.innerHTML = result;
+    }
  }
+
+ function countdown(param)
+ {
+   if(param > 0)
+    countdown_span.innerHTML = "Reloading in "+param+"...";
+   else
+    countdown_span.innerHTML = "";
+ }
+
+ function countdown
 </script>
 </head>
 <body onload="javascript:start_reloading();">
 <div id="content">
 
 </div>
-<div class='bottom'></div>
+<div class="bottom" id="countdown"></div>
 </body>
 </html>
 
