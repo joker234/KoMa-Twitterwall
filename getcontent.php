@@ -74,7 +74,7 @@ function fancy_tweet_display($tweet)
                 }
                 else
                 {
-                    $qrcode = qr_code($url, 250, 250);
+                    $media = qr_code($url, 200, 200).'<br />Scanne mich!';
                 }
             }
         }
@@ -87,10 +87,6 @@ function fancy_tweet_display($tweet)
     $datum = new DateTime($datum);
     $datum->setTimezone(new DateTimeZone('Europe/Berlin'));
     $result .="<span class='date' >".$datum->format('D H:i:s');
-    if(!empty($qrcode))
-    {
-        $result .= "<br />".$qrcode;
-    }
     $result .= "</span>";
     $result .="<div class='tweettext'>";
     $result .=utf8_decode($tweet->text)."</div></div>";
