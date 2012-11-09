@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>KIF Twitter-Wall</title>
+<link rel="stylesheet" type="text/css" href="twitterwall.css">
+<script type="text/javascript">
+ var poll_delay = 10;
+ var content_div;
+
+var xmlhttp;
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp = new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+ function start_reloading()
+ {
+   content_div = document.getElementById("content");
+   reload_content();
+   window.setInterval("reload_content()", poll_delay * 1000);
+ }
+
+ function reload_content()
+ {
+   xmlhttp.open("GET","getcontent.php",false);
+   xmlhttp.send();
+   var result = xmlhttp.responseText;
+   if(result.length)
+   {
+     content_div.innerHTML = result;
+   }
+ }
+</script>
+</head>
+<body onload="javascript:start_reloading();">
+<div id="content">
+
+</div>
+<div class='bottom'></div>
+</body>
+</html>
+
