@@ -24,6 +24,7 @@ body {
 img {
     max-height: 250px;
     border: 1px solid #888;
+    border-radius: 5px
 }
 html {
     overflow: hidden;
