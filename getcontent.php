@@ -77,14 +77,14 @@ function fancy_tweet_display($tweet, $orientation_right)
         }
     }
 
-    $result ="<div class='tweet'><img src='".$tweet->profile_image_url;
-    $result .="' align='left' width='48' height='48' hspace='5' /><div class='content'>";    
+    $result ="<div class='tweet'><div class='ribbon'><img src='".$tweet->profile_image_url;
+    $result .="' align='left' width='48' height='48' hspace='5' /></div><div class='content'>";    
     $result .=utf8_decode($tweet->from_user_name)." (@".$tweet->from_user.")";
     $datum = $tweet->created_at;
     $datum = new DateTime($datum);
     $datum->setTimezone(new DateTimeZone('Europe/Berlin'));
-    $result .="<span class='date' >".$datum->format('D H:i:s');
-    $result .= "</span>";
+    $result .="<div class='dateribbon'><div class='date' >".$datum->format('D H:i:s');
+    $result .= "</div></div>";
     $result .="<div class='tweettext'>";
     $result .=utf8_decode($tweet->text)."</div></div>";
 
