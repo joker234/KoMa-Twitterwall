@@ -77,7 +77,7 @@ function fancy_tweet_display($tweet, $orientation_right)
         }
     }
 
-    $result ="<div class='tweet'><div class='ribbon'><img src='".$tweet->profile_image_url;
+    $result ="<div class='tweet'><div class='gloss'><div class='ribbon'><img src='".$tweet->profile_image_url;
     $result .="' align='left' width='48' height='48' hspace='5' /></div><div class='content'>";    
     $result .=utf8_decode($tweet->from_user_name)." (@".$tweet->from_user.")";
     $datum = $tweet->created_at;
@@ -90,7 +90,7 @@ function fancy_tweet_display($tweet, $orientation_right)
 
     $result .= "<center><br />".$media."</center>";
 
-    $result .="</div>";
+    $result .="</div></div>";
 
     return $result;
 }
