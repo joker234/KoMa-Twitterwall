@@ -6,11 +6,16 @@
 //setlocale( "LC_ALL", "de-DE" ); // Linux
 
 // Suche nach Hashtag...
-$hashtag="kif405";
-$APIurl = "http://search.twitter.com/search.json?q=%23".$hashtag."%20OR%20@KIFORGABUERO%20+exclude:retweets&include_entities=true&rrp=10&page=1&result_type=recent";
+$hashtag=$_GET["key"];
+$APIurl = "http://search.twitter.com/search.json?q=%23".$hashtag."+exclude:retweets&include_entities=true&rrp=10&page=1&result_type=recent";
 
 header('Content-Type: text/html; charset=ISO-8859-1');
 
+if ($hashtag == "undefined")
+{
+    echo "Bitte mit ?key=foobar einen Hashtag definierten";
+    return;
+}
 // https://dev.twitter.com/docs/using-search
 
 // GET vorbereiten
