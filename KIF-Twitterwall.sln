@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E334F76D-604C-48A2-A79E-AAAAA0E7AC1E}"
+	ProjectSection(SolutionItems) = preProject
+		fade.png = fade.png
+		fade2.png = fade2.png
+		index.html = index.html
+		jquery.min.js = jquery.min.js
+		README.md = README.md
+		twitterwall.css = twitterwall.css
+		twitterwall.js = twitterwall.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
