@@ -24,8 +24,8 @@ img {
     max-height: 250px;
 }
 html {
-    overflow: hidden;
-    cursor: none;
+    /*overflow: hidden;
+    cursor: none;*/
 }
 .date {
     float: right;
