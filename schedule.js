@@ -7,19 +7,19 @@ $(document).ready(function() {
 
     var intToDay = function(d) {
         switch (d) {
-        case 0:
-            return "Montag";
         case 1:
-            return "Dienstag";
+            return "Montag";
         case 2:
-            return "Mittwoch";
+            return "Dienstag";
         case 3:
-            return "Donnerstag";
+            return "Mittwoch";
         case 4:
-            return "Freitag";
+            return "Donnerstag";
         case 5:
-            return "Samstag";
+            return "Freitag";
         case 6:
+            return "Samstag";
+        case 7:
             return "Sonntag";
         default:
             return "Keintag(" + d + ")";
