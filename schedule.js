@@ -1,7 +1,7 @@
 $(document).ready(function() {
     console.log("Initializing Schedule");
 
-    $.getJSON("stundenplan.json?", function(data) {
+    $.getJSON("stundenplan.json?callback=?", function(data) {
         renderSchedule(data);
     });
 
