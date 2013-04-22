@@ -6,10 +6,12 @@ $(document).ready(function() {
     });
 
     var renderSchedule = function(data) {
-        console.log(data);
         var scheduleDiv = $("#schedule");
         $.each(data, function (i, e) {
-            console.log(e);
+            var roomDiv = $("<div>").addClass("Room");
+            roomDiv.append($("<span>").addClass("RoomName").html(e.RoomName + " - " + e.RoomBuilding));
+
+            scheduleDiv.append(roomDiv);
         });
     };
     
