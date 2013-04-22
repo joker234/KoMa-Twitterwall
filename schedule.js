@@ -22,7 +22,7 @@ $(document).ready(function() {
         case 0:
             return "Sonntag";
         default:
-            return "Keintag";
+            return "Keintag(" + d + ")";
         }
     };
 
