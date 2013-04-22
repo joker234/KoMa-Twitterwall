@@ -15,9 +15,9 @@ $(document).ready(function() {
             $.each(room.Schedule, function (it, event) {
 
                 var start = new Date(event.StartTime);
-                var startString = start.getDay + " " + start.getHours + " " + start.getMinutes;
+                var startString = start.getDay() + " " + start.getHours() + " " + start.getMinutes();
                 var end = new Date(event.EndTime);
-                var endString = end.getDay + " " + end.getHours + " " + end.getMinutes;
+                var endString = end.getDay() + " " + end.getHours() + " " + end.getMinutes();
 
 
                 var eventDiv = $("<div>").addClass("Event");
