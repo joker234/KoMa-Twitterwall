@@ -9,17 +9,17 @@ $(document).ready(function() {
         switch (d) {
         case 0:
             return "Montag";
-        case 0:
+        case 1:
             return "Dienstag";
-        case 0:
+        case 2:
             return "Mittwoch";
-        case 0:
+        case 3:
             return "Donnerstag";
-        case 0:
+        case 4:
             return "Freitag";
-        case 0:
+        case 5:
             return "Samstag";
-        case 0:
+        case 6:
             return "Sonntag";
         default:
             return "Keintag(" + d + ")";
