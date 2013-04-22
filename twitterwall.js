@@ -15,19 +15,18 @@ $(document).ready(function () {
 
         update();
 
-        setInterval(update, 1000);
+        setInterval(update, 10000);
 
     };
 
     var update = function () {
-        console.log("Making request to: " + baseURL + refreshURL + "&callback=?");
+        //console.log("Making request to: " + baseURL + refreshURL + "&callback=?");
 
         $.getJSON(baseURL + refreshURL + "&callback=?", {
             cache: false
-            }, function (data) {
-
-            console.log("result:");
-            console.log(data);
+        }, function (data) {
+            
+            console.log("new tweets: " + data.results.length);
 
             refreshURL = data.refresh_url;
 
@@ -46,5 +45,12 @@ $(document).ready(function () {
         $("#tweets").prepend(div);
         div.slideDown(1000);
 
+        var count = $(".tweet").length;
+        
+        
+        for (var i = 20; i < count; i++) {
+            var item = $(".tweet:nth-child(" + i + ")");
+            item.remove();
+        }
     };
 });
