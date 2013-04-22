@@ -1,0 +1,66 @@
+[
+    {
+        "RoomName": "Raum1",
+        "RoomBuilding": "Haus1",
+        "Schedule":
+        [
+            {
+                "EventName": "AK Filme gucken",
+                "StartTime": "05-23-2013 12:00 GMT+02:00" ,
+                "EndTime": "05-23-2013 14:30 GMT+02:00"
+            },
+            {
+                "EventName": "AK Faulenzen",
+                "StartTime": "05-23-2013 15:00 GMT+02:00" ,
+                "EndTime": "05-23-2013 17:00 GMT+02:00"
+            },
+            {
+                "EventName": "AK Furzen",
+                "StartTime": "05-23-2013 17:00 GMT+02:00" ,
+                "EndTime": "05-23-2013 21:00 GMT+02:00"
+            },
+            {
+                "EventName": "AK Guten Morgen",
+                "StartTime": "05-24-2013 08:00 GMT+02:00" ,
+                "EndTime": "05-24-2013 09:00 GMT+02:00"
+            },
+            {
+                "EventName": "AK Frühstück",
+                "StartTime": "05-24-2013 09:00 GMT+02:00" ,
+                "EndTime": "05-24-2013 11:00 GMT+02:00"
+            }
+        ]
+    },
+    {
+        "RoomName": "Raum2",
+        "RoomBuilding": "Haus1",
+        "Schedule":
+        [
+            {
+                "EventName": "AK Wirklich Arbeiten",
+                "StartTime": "05-23-2013 11:00 GMT+02:00" ,
+                "EndTime": "05-23-2013 13:30 GMT+02:00"
+            },
+            {
+                "EventName": "AK Paintball",
+                "StartTime": "05-23-2013 13:30 GMT+02:00" ,
+                "EndTime": "05-23-2013 17:00 GMT+02:00"
+            },
+            {
+                "EventName": "AK Planking",
+                "StartTime": "05-23-2013 17:00 GMT+02:00" ,
+                "EndTime": "05-23-2013 21:00 GMT+02:00"
+            },
+            {
+                "EventName": "AK Waterboarding",
+                "StartTime": "05-24-2013 08:00 GMT+02:00" ,
+                "EndTime": "05-24-2013 09:00 GMT+02:00"
+            },
+            {
+                "EventName": "AK Bier trinken",
+                "StartTime": "05-24-2013 09:00 GMT+02:00" ,
+                "EndTime": "05-24-2013 18:00 GMT+02:00"
+            }
+        ]
+    }
+]
