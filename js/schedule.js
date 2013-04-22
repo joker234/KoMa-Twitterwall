@@ -29,7 +29,7 @@ $(document).ready(function() {
     var renderSchedule = function(data) {
         var scheduleDiv = $("#schedule");
         $.each(data, function (i, room) {
-            var roomDiv = $("<div>").addClass("Room");
+            var roomDiv = $("<div>").addClass("Room well pull-left");
             roomDiv.append($("<span>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
             console.log(room.Schedule);
