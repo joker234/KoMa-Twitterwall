@@ -5,6 +5,27 @@ $(document).ready(function() {
         renderSchedule(data);
     });
 
+    var intToDay = function(d) {
+        switch (d) {
+        case 0:
+            return "Montag";
+        case 0:
+            return "Dienstag";
+        case 0:
+            return "Mittwoch";
+        case 0:
+            return "Donnerstag";
+        case 0:
+            return "Freitag";
+        case 0:
+            return "Samstag";
+        case 0:
+            return "Sonntag";
+        default:
+            return "Keintag";
+        }
+    };
+
     var renderSchedule = function(data) {
         var scheduleDiv = $("#schedule");
         $.each(data, function (i, room) {
@@ -15,9 +36,9 @@ $(document).ready(function() {
             $.each(room.Schedule, function (it, event) {
 
                 var start = new Date(event.StartTime);
-                var startString = start.getDay() + " " + start.getHours() + " " + start.getMinutes();
+                var startString = intToDay(start.getDay()) + " " + start.getHours() + " " + start.getMinutes();
                 var end = new Date(event.EndTime);
-                var endString = end.getDay() + " " + end.getHours() + " " + end.getMinutes();
+                var endString = intToDay(end.getDay()) + " " + end.getHours() + " " + end.getMinutes();
 
 
                 var eventDiv = $("<div>").addClass("Event");
