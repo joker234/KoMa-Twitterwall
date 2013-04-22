@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		index.html = index.html
 		jquery.min.js = jquery.min.js
 		README.md = README.md
+		stundenplan.json = stundenplan.json
 		twitterwall.css = twitterwall.css
 		twitterwall.js = twitterwall.js
 	EndProjectSection
