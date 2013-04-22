@@ -14,8 +14,38 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		twitterwall.js = twitterwall.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JS", "JS", "{25B04897-8992-486E-9ED4-B7ADD40DD4EA}"
+	ProjectSection(SolutionItems) = preProject
+		js\bootstrap.js = js\bootstrap.js
+		js\bootstrap.min.js = js\bootstrap.min.js
+		jquery.min.js = jquery.min.js
+		schedule.js = schedule.js
+		stundenplan.json = stundenplan.json
+		twitterwall.js = twitterwall.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{DB2F57E8-E9BD-44DD-94F9-40C0D60D7ACB}"
+	ProjectSection(SolutionItems) = preProject
+		css\bootstrap.css = css\bootstrap.css
+		css\bootstrap.min.css = css\bootstrap.min.css
+		twitterwall.css = twitterwall.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{A64707B5-22CA-46A6-B26F-248C5F9328B7}"
+	ProjectSection(SolutionItems) = preProject
+		fade.png = fade.png
+		fade2.png = fade2.png
+		img\glyphicons-halflings-white.png = img\glyphicons-halflings-white.png
+		img\glyphicons-halflings.png = img\glyphicons-halflings.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25B04897-8992-486E-9ED4-B7ADD40DD4EA} = {E334F76D-604C-48A2-A79E-AAAAA0E7AC1E}
+		{DB2F57E8-E9BD-44DD-94F9-40C0D60D7ACB} = {E334F76D-604C-48A2-A79E-AAAAA0E7AC1E}
+		{A64707B5-22CA-46A6-B26F-248C5F9328B7} = {E334F76D-604C-48A2-A79E-AAAAA0E7AC1E}
 	EndGlobalSection
 EndGlobal
