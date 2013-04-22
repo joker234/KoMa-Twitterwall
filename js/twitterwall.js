@@ -26,7 +26,6 @@ $(document).ready(function () {
             cache: false
         }, function (data) {
             
-            console.log("new tweets: " + data.results.length);
 
             refreshURL = data.refresh_url;
 
@@ -39,7 +38,7 @@ $(document).ready(function () {
 
     var render = function (tweet) {
         var date = new Date(tweet.created_at);
-        var div = $("<div>").addClass("tweet").html("[" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "] " + tweet.from_user + ": " + tweet.text);
+        var div = $("<div>").addClass("tweet well").html("[" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "] " + tweet.from_user + ": " + tweet.text);
 
         div.hide();
         $("#tweets").prepend(div);
