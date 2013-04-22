@@ -11,6 +11,7 @@ $(document).ready(function() {
             var roomDiv = $("<div>").addClass("Room");
             roomDiv.append($("<span>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
+            console.log(room.Schedule);
             $.each(room.Schedule, function (it, event) {
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
