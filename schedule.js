@@ -15,12 +15,15 @@ $(document).ready(function() {
             $.each(room.Schedule, function (it, event) {
 
                 var start = new Date(event.StartTime);
+                var startString = start.getDay + " " + start.getHours + " " + start.getMinutes;
                 var end = new Date(event.EndTime);
+                var endString = end.getDay + " " + end.getHours + " " + end.getMinutes;
+
 
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
-                eventDiv.append($("<span>").addClass("EventStartTime").html(start.getDay() + " " + start.getTime()));
-                eventDiv.append($("<span>").addClass("EventEndTime").html(end.getDay() + " " + end.getTime()));
+                eventDiv.append($("<span>").addClass("EventStartTime").html(startString));
+                eventDiv.append($("<span>").addClass("EventEndTime").html(endString));
 
                 roomDiv.append(eventDiv);
             });
