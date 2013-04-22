@@ -1,8 +1,16 @@
 $(document).ready(function() {
     console.log("Initializing Schedule");
 
-    var schedule = $.getJSON("stundenplan.json?callback=?");
+    $.getJSON("stundenplan.json?callback=?", function(data) {
+        renderSchedule(data);
+    });
 
-    console.log(schedule);
-
+    var renderSchedule = function(data) {
+        console.log(data);
+        var scheduleDiv = $("#schedule");
+        $.each(data, function (i, e) {
+            console.log(e);
+        });
+    };
+    
 });
