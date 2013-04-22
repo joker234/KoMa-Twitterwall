@@ -19,8 +19,8 @@ $(document).ready(function() {
 
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
-                eventDiv.append($("<span>").addClass("EventStartTime").html(start.getDay + " " + start.getTime));
-                eventDiv.append($("<span>").addClass("EventEndTime").html(end.getDay + " " + end.getTime));
+                eventDiv.append($("<span>").addClass("EventStartTime").html(start.getDay() + " " + start.getTime()));
+                eventDiv.append($("<span>").addClass("EventEndTime").html(end.getDay() + " " + end.getTime()));
 
                 roomDiv.append(eventDiv);
             });
