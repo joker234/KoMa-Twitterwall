@@ -1,3 +1,9 @@
+function pad(num) {
+    var s = num + "";
+    while (s.length < 2) s = "0" + s;
+    return s;
+}
+
 $(document).ready(function () {
 
     var baseURL = "http://search.twitter.com/search.json";
@@ -38,7 +44,7 @@ $(document).ready(function () {
 
     var render = function (tweet) {
         var date = new Date(tweet.created_at);
-        var div = $("<div>").addClass("tweet well").html("[" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "] " + tweet.from_user + ": " + tweet.text);
+        var div = $("<div>").addClass("tweet well").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] " + tweet.from_user + ": " + tweet.text);
 
         div.hide();
         $("#tweets").prepend(div);
