@@ -9,16 +9,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="css/twitterwall.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    
 </head>
-    <body>
-        <div id="search">
-            <input type="text" id="queryField" value="#whatiskey"/>
-            <button class="btn" id="submitButton"><i class="icon-search"></i> Search</button>
+<body>
+    <div id="search">
+        <input type="text" id="queryField" value="#whatiskey" />
+        <button class="btn" id="submitButton"><i class="icon-search"></i>Search</button>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div id="tweets" class="span6">
+            </div>
+            <div id="schedule" class="span6"></div>
         </div>
-        <div id="tweets"></div>
-        <div id="schedule"></div>
-        <div id="status"></div>
-    
-    </body>
+    </div>
+    <div id="status"></div>
+</body>
 </html>
