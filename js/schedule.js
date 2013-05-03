@@ -4,7 +4,6 @@ $(document).ready(function() {
     var stuff;
 
     var fetch = function () {
-        console.log("fetch")
         $.getJSON("stundenplan.json", function(data) {
             stuff = data;
             console.log("fetch done");
@@ -41,7 +40,6 @@ $(document).ready(function() {
     };
 
     var renderSchedule = function() {
-        console.log("render");
         var scheduleDiv = $("#schedule");
         scheduleDiv.html("");
 
