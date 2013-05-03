@@ -5,6 +5,7 @@
 	margin-top: 10px;
 	margin-left: 10px;
 }
-body {
+html {
 	overflow: hidden;
+	cursor: none;
 }
