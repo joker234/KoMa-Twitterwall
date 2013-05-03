@@ -5,7 +5,7 @@ $(document).ready(function() {
         renderSchedule(data);
         setInterval(function() {
             renderSchedule(data);
-        },60000)
+        },1000)
     });
     
 
