@@ -34,6 +34,11 @@ $(document).ready(function() {
         var scheduleDiv = $("#schedule");
         scheduleDiv.html("");
 
+        var now = new Date();
+        var nowString = intToDay(now.getDay()) + " " + pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds());
+
+        scheduleDiv.append($("<div>").addClass("well Time").html(nowString));
+
         $.each(data, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
@@ -50,7 +55,6 @@ $(document).ready(function() {
                 var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
                 var end = new Date(event.EndTime);
                 var endString = " - " + pad(end.getHours()) + ":" + pad(end.getMinutes());
-                var now = new Date();
 
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
