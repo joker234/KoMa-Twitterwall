@@ -16,9 +16,6 @@
 	font-weight: bold;
 	float: left;
 }
-.EventStartTime {
-	float: right;
-}
-.EventEndTime {
+.EventTime {
 	float: right;
 }
