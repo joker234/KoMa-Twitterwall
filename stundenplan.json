@@ -10,28 +10,28 @@
       },
       {
         "EventName": "AK Faulenzen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T12:00+02:00",
+        "EndTime": "2013-05-03T14:00+02:00"
       },
       {
         "EventName": "AK Furzen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T14:00+02:00",
+        "EndTime": "2013-05-03T16:00+02:00"
       },
       {
         "EventName": "AK Guten Morgen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T16:00+02:00",
+        "EndTime": "2013-05-03T18:00+02:00"
       },
       {
         "EventName": "AK Frühstück",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T18:00+02:00",
+        "EndTime": "2013-05-03T20:00+02:00"
       }
     ]
   },
   {
-    "RoomName": "Raum1",
+    "RoomName": "Raum2",
     "RoomBuilding": "Haus1",
     "Schedule": [
       {
@@ -41,29 +41,29 @@
       },
       {
         "EventName": "AK Faulenzen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T12:00+02:00",
+        "EndTime": "2013-05-03T14:00+02:00"
       },
       {
         "EventName": "AK Furzen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T14:00+02:00",
+        "EndTime": "2013-05-03T16:00+02:00"
       },
       {
         "EventName": "AK Guten Morgen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T16:00+02:00",
+        "EndTime": "2013-05-03T18:00+02:00"
       },
       {
         "EventName": "AK Frühstück",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T18:00+02:00",
+        "EndTime": "2013-05-03T20:00+02:00"
       }
     ]
   },
   {
     "RoomName": "Raum1",
-    "RoomBuilding": "Haus1",
+    "RoomBuilding": "Haus2",
     "Schedule": [
       {
         "EventName": "AK Filme gucken",
@@ -72,23 +72,23 @@
       },
       {
         "EventName": "AK Faulenzen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T12:00+02:00",
+        "EndTime": "2013-05-03T14:00+02:00"
       },
       {
         "EventName": "AK Furzen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T14:00+02:00",
+        "EndTime": "2013-05-03T16:00+02:00"
       },
       {
         "EventName": "AK Guten Morgen",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T16:00+02:00",
+        "EndTime": "2013-05-03T18:00+02:00"
       },
       {
         "EventName": "AK Frühstück",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
+        "StartTime": "2013-05-03T18:00+02:00",
+        "EndTime": "2013-05-03T20:00+02:00"
       }
     ]
   }
