@@ -30,7 +30,7 @@
       }
     ]
   },
-    {
+  {
     "RoomName": "Raum1",
     "RoomBuilding": "Haus1",
     "Schedule": [
@@ -61,7 +61,7 @@
       }
     ]
   },
-    {
+  {
     "RoomName": "Raum1",
     "RoomBuilding": "Haus1",
     "Schedule": [
@@ -91,6 +91,5 @@
         "EndTime": "2013-05-03T12:00+02:00"
       }
     ]
-  },
- 
+  }
 ]
