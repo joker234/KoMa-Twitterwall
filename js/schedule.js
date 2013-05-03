@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     var renderSchedule = function(data) {
         var scheduleDiv = $("#schedule");
-        schedule.html("");
+        scheduleDiv.html("");
 
         $.each(data, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
