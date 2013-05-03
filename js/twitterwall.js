@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     var render = function (tweet) {
         var date = new Date(tweet.created_at);
-        var div = $("<div>").addClass("tweet well").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] " + tweet.from_user + ": " + tweet.text);
+        var div = $("<div>").addClass("tweet well").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] <b>" + tweet.from_user + ":</b> " + tweet.text);
 
         div.hide();
         $("#tweets").prepend(div);
