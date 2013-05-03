@@ -50,7 +50,7 @@ $(document).ready(function() {
 
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
-                eventDiv.append($("<span>").addClass("EventTime" + startString < now ? " now").html(startString + endString));
+                eventDiv.append($("<span>").addClass("EventTime" + (startString < now) ? " now" : "").html(startString + endString));
 
                 roomDiv.append(eventDiv);
             });
