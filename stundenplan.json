@@ -10,148 +10,87 @@
       },
       {
         "EventName": "AK Faulenzen",
-        "StartTime": "05-3-2013 08:51 GMT+02:00",
-        "EndTime": "05-3-2013 08:52 GMT+02:00"
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
         "EventName": "AK Furzen",
-        "StartTime": "05-23-2013 17:00 GMT+02:00",
-        "EndTime": "05-23-2013 21:00 GMT+02:00"
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
         "EventName": "AK Guten Morgen",
-        "StartTime": "05-24-2013 08:00 GMT+02:00",
-        "EndTime": "05-24-2013 09:00 GMT+02:00"
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
         "EventName": "AK Frühstück",
-        "StartTime": "05-24-2013 09:00 GMT+02:00",
-        "EndTime": "05-24-2013 11:00 GMT+02:00"
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       }
     ]
   },
-  {
-    "RoomName": "Raum2",
+    {
+    "RoomName": "Raum1",
     "RoomBuilding": "Haus1",
     "Schedule": [
       {
-        "EventName": "AK Wirklich Arbeiten",
-        "StartTime": "05-23-2013 11:00 GMT+02:00",
-        "EndTime": "05-23-2013 13:30 GMT+02:00"
+        "EventName": "AK Filme gucken",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Paintball",
-        "StartTime": "05-23-2013 13:30 GMT+02:00",
-        "EndTime": "05-23-2013 17:00 GMT+02:00"
+        "EventName": "AK Faulenzen",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Planking",
-        "StartTime": "05-23-2013 17:00 GMT+02:00",
-        "EndTime": "05-23-2013 21:00 GMT+02:00"
+        "EventName": "AK Furzen",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Waterboarding",
-        "StartTime": "05-24-2013 08:00 GMT+02:00",
-        "EndTime": "05-24-2013 09:00 GMT+02:00"
+        "EventName": "AK Guten Morgen",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Bier trinken",
-        "StartTime": "05-24-2013 09:00 GMT+02:00",
-        "EndTime": "05-24-2013 18:00 GMT+02:00"
+        "EventName": "AK Frühstück",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       }
     ]
   },
-  {
-    "RoomName": "Raum3",
+    {
+    "RoomName": "Raum1",
     "RoomBuilding": "Haus1",
     "Schedule": [
       {
-        "EventName": "AK Wirklich Arbeiten",
-        "StartTime": "05-23-2013 11:00 GMT+02:00",
-        "EndTime": "05-23-2013 13:30 GMT+02:00"
+        "EventName": "AK Filme gucken",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Paintball",
-        "StartTime": "05-23-2013 13:30 GMT+02:00",
-        "EndTime": "05-23-2013 17:00 GMT+02:00"
+        "EventName": "AK Faulenzen",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Planking",
-        "StartTime": "05-23-2013 17:00 GMT+02:00",
-        "EndTime": "05-23-2013 21:00 GMT+02:00"
+        "EventName": "AK Furzen",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Waterboarding",
-        "StartTime": "05-24-2013 08:00 GMT+02:00",
-        "EndTime": "05-24-2013 09:00 GMT+02:00"
+        "EventName": "AK Guten Morgen",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
-        "EventName": "AK Bier trinken",
-        "StartTime": "05-24-2013 09:00 GMT+02:00",
-        "EndTime": "05-24-2013 18:00 GMT+02:00"
+        "EventName": "AK Frühstück",
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       }
     ]
   },
-  {
-    "RoomName": "Raum1",
-    "RoomBuilding": "Haus2",
-    "Schedule": [
-      {
-        "EventName": "AK Wirklich Arbeiten",
-        "StartTime": "05-23-2013 11:00 GMT+02:00",
-        "EndTime": "05-23-2013 13:30 GMT+02:00"
-      },
-      {
-        "EventName": "AK Paintball",
-        "StartTime": "05-23-2013 13:30 GMT+02:00",
-        "EndTime": "05-23-2013 17:00 GMT+02:00"
-      },
-      {
-        "EventName": "AK Planking",
-        "StartTime": "05-23-2013 17:00 GMT+02:00",
-        "EndTime": "05-23-2013 21:00 GMT+02:00"
-      },
-      {
-        "EventName": "AK Waterboarding",
-        "StartTime": "05-24-2013 08:00 GMT+02:00",
-        "EndTime": "05-24-2013 09:00 GMT+02:00"
-      },
-      {
-        "EventName": "AK Bier trinken",
-        "StartTime": "05-24-2013 09:00 GMT+02:00",
-        "EndTime": "05-24-2013 18:00 GMT+02:00"
-      }
-    ]
-  },
-  {
-    "RoomName": "Raum1",
-    "RoomBuilding": "Haus2",
-    "Schedule": [
-      {
-        "EventName": "AK Wirklich Arbeiten",
-        "StartTime": "05-23-2013 11:00 GMT+02:00",
-        "EndTime": "05-23-2013 13:30 GMT+02:00"
-      },
-      {
-        "EventName": "AK Paintball",
-        "StartTime": "05-23-2013 13:30 GMT+02:00",
-        "EndTime": "05-23-2013 17:00 GMT+02:00"
-      },
-      {
-        "EventName": "AK Planking",
-        "StartTime": "05-23-2013 17:00 GMT+02:00",
-        "EndTime": "05-23-2013 21:00 GMT+02:00"
-      },
-      {
-        "EventName": "AK Waterboarding",
-        "StartTime": "05-24-2013 08:00 GMT+02:00",
-        "EndTime": "05-24-2013 09:00 GMT+02:00"
-      },
-      {
-        "EventName": "AK Bier trinken",
-        "StartTime": "05-24-2013 09:00 GMT+02:00",
-        "EndTime": "05-24-2013 18:00 GMT+02:00"
-      }
-    ]
-  }
+ 
 ]
