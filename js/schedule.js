@@ -44,9 +44,9 @@ $(document).ready(function() {
 
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
-                eventDiv.append($("<span>").addClass("EventStartTime").html(startString));
                 eventDiv.append($("<span>").addClass("EventEndTime").html(endString));
-
+                eventDiv.append($("<span>").addClass("EventStartTime").html(startString));
+                
                 roomDiv.append(eventDiv);
             });
 

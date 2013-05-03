@@ -5,10 +5,11 @@
 .EventTitle {
 	font-size: 14px;
 	font-weight: bold;
+	float: left;
 }
 .EventStartTime {
-
+	float: right;
 }
 .EventEndTime {
-
+	float: right;
 }
