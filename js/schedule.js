@@ -58,6 +58,8 @@ $(document).ready(function() {
                 return now < end;
             });
 
+            console.log(nextEvents);
+
             $.each(nextEvents, function (it, event) {
                 console.log("render event?");
                 if (it < 3) {
