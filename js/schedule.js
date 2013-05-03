@@ -35,9 +35,9 @@ $(document).ready(function() {
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
             var nextEvents = _.filter(room.Schedule, function(e,i) {
-                var start = new Date(e.StartTime);
+                var end = new Date(e.EndTime);
                 var now = new Date();
-                return now < start;
+                return now < end;
             });
 
             $.each(nextEvents, function (it, event) {
@@ -46,11 +46,11 @@ $(document).ready(function() {
                 var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
                 var end = new Date(event.EndTime);
                 var endString = " - " + pad(end.getHours()) + ":" + pad(end.getMinutes());
-
+                var now = new Date();
 
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
-                eventDiv.append($("<span>").addClass("EventTime").html(startString + endString));
+                eventDiv.append($("<span>").addClass("EventTime" + startString < now ? " now").html(startString + endString));
 
                 roomDiv.append(eventDiv);
             });
