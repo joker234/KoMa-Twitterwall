@@ -39,7 +39,7 @@ $(document).ready(function() {
 
         scheduleDiv.append($("<div>").addClass("well Time").html(nowString));
 
-        &.each(data, function (i, room) {
+        $.each(data, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
