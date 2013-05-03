@@ -2,6 +2,15 @@
 	margin-top: 10px;
 }
 
+.Room {
+	width: 500px;
+}
+
+.Event {
+	width: 500px;
+	height: 20px;
+}
+
 .EventTitle {
 	font-size: 14px;
 	font-weight: bold;
