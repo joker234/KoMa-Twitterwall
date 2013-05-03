@@ -38,6 +38,7 @@ $(document).ready(function() {
     };
 
     var renderSchedule = function() {
+        console.log("render");
         var scheduleDiv = $("#schedule");
         scheduleDiv.html("");
 
@@ -47,6 +48,7 @@ $(document).ready(function() {
         scheduleDiv.append($("<div>").addClass("well Time").html(nowString));
 
         $.each(stuff, function (i, room) {
+            console.log("render room");
             var roomDiv = $("<div>").addClass("Room well");
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
@@ -58,6 +60,7 @@ $(document).ready(function() {
 
             $.each(nextEvents, function (it, event) {
                 if (it < 3) {
+                    console.log("render event");
                     var start = new Date(event.StartTime);
                     var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
                     var end = new Date(event.EndTime);
