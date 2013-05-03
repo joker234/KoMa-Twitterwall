@@ -3,6 +3,9 @@ $(document).ready(function() {
 
     $.getJSON("stundenplan.json", function(data) {
         renderSchedule(data);
+        setInterval(function() {
+            renderSchedule(data);
+        },60000)
     });
     
 
@@ -29,6 +32,7 @@ $(document).ready(function() {
 
     var renderSchedule = function(data) {
         var scheduleDiv = $("#schedule");
+        schedule.html("");
 
         $.each(data, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
