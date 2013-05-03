@@ -29,12 +29,14 @@ $(document).ready(function() {
 
     var renderSchedule = function(data) {
         var scheduleDiv = $("#schedule");
+
         $.each(data, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
-            console.log(room.Schedule);
-            $.each(room.Schedule, function (it, event) {
+            var nextEvents = room.Schedule.filter(function() {return true;});
+
+            $.each(nextEvents, function (it, event) {
 
                 var start = new Date(event.StartTime);
                 var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
