@@ -5,8 +5,8 @@
     "Schedule": [
       {
         "EventName": "AK Filme gucken",
-        "StartTime": "05-3-2013 08:50 GMT+02:00",
-        "EndTime": "05-3-2013 08:51 GMT+02:00"
+        "StartTime": "2013-05-03T10:00+02:00",
+        "EndTime": "2013-05-03T12:00+02:00"
       },
       {
         "EventName": "AK Faulenzen",
