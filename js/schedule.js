@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    console.log("Initializing Schedule");
 
     var stuff;
 
     var fetch = function () {
         $.getJSON("stundenplan.json", function(data) {
             stuff = data;
-            console.log("fetch done");
         });
     };
     setInterval(function() {
