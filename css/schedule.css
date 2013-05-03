@@ -23,3 +23,7 @@
 .EventTime {
 	float: right;
 }
+
+.now {
+	color: green;
+}
