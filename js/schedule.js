@@ -34,7 +34,11 @@ $(document).ready(function() {
             var roomDiv = $("<div>").addClass("Room well");
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
-            var nextEvents = room.Schedule.filter(function() {return true;});
+            var nextEvents = _.filter(room.Schedule, function(e,i) {
+                var start = new Date(event.StartTime);
+                var now = new Date();
+                return now < start;
+            });
 
             $.each(nextEvents, function (it, event) {
 
