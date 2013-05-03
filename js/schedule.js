@@ -4,10 +4,10 @@ $(document).ready(function() {
     var stuff;
 
     var fetch = function () {
+        console.log("fetch")
         $.getJSON("stundenplan.json", function(data) {
             stuff = data;
-            renderSchedule();
-            
+            console.log("fetch done");
         });
     };
     setInterval(function() {
@@ -40,7 +40,8 @@ $(document).ready(function() {
         }
     };
 
-    var renderSchedule = function(data) {
+    var renderSchedule = function() {
+        console.log("render");
         var scheduleDiv = $("#schedule");
         scheduleDiv.html("");
 
@@ -49,7 +50,7 @@ $(document).ready(function() {
 
         scheduleDiv.append($("<div>").addClass("well Time").html(nowString));
 
-        $.each(data, function (i, room) {
+        $.each(stuff, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
