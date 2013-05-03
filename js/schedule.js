@@ -1,12 +1,22 @@
 $(document).ready(function() {
     console.log("Initializing Schedule");
 
-    $.getJSON("stundenplan.json", function(data) {
-        renderSchedule(data);
-        setInterval(function() {
-            renderSchedule(data);
-        },1000)
-    });
+    var stuff;
+
+    var fetch = function () {
+        $.getJSON("stundenplan.json", function(data) {
+            stuff = data;
+            renderSchedule();
+            
+        });
+    };
+    setInterval(function() {
+                renderSchedule();
+            },1000);
+    setInterval(function() {
+                fetch();
+            },60000);
+    fetch();
     
 
     var intToDay = function(d) {
