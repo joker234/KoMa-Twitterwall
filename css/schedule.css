@@ -1,3 +1,14 @@
-.event>span {
-	margin: 3px;
+body {
+	margin: 10px;
+}
+
+.EventTitle {
+	font-size: 14px;
+	font-weight: bold;
+}
+.EventStartTime {
+
+}
+.EventEndTime {
+
 }
