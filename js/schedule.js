@@ -59,6 +59,7 @@ $(document).ready(function() {
             });
 
             $.each(nextEvents, function (it, event) {
+                console.log("render event?");
                 if (it < 3) {
                     console.log("render event");
                     var start = new Date(event.StartTime);
