@@ -56,8 +56,6 @@ $(document).ready(function() {
                 return now < end;
             });
 
-            console.log(nextEvents);
-
             $.each(nextEvents, function (it, event) {
                 if (it < 3) {
                     var start = new Date(event.StartTime);
