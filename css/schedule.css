@@ -27,3 +27,10 @@
 .now {
 	color: green;
 }
+
+.Time {
+	text-align: center;
+	font-size: 80px;
+	height: 50px;
+	padding-top: 50px;
+}

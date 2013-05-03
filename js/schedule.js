@@ -39,7 +39,7 @@ $(document).ready(function() {
 
         scheduleDiv.append($("<div>").addClass("well Time").html(nowString));
 
-        $.each(data, function (i, room) {
+        &.each(data, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
             roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
 
@@ -50,17 +50,18 @@ $(document).ready(function() {
             });
 
             $.each(nextEvents, function (it, event) {
+                if (it < 3) {
+                    var start = new Date(event.StartTime);
+                    var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
+                    var end = new Date(event.EndTime);
+                    var endString = " - " + pad(end.getHours()) + ":" + pad(end.getMinutes());
 
-                var start = new Date(event.StartTime);
-                var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
-                var end = new Date(event.EndTime);
-                var endString = " - " + pad(end.getHours()) + ":" + pad(end.getMinutes());
+                    var eventDiv = $("<div>").addClass("Event");
+                    eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
+                    eventDiv.append($("<span>").addClass("EventTime" + ((start < now) ? " now" : "")).html(startString + endString));
 
-                var eventDiv = $("<div>").addClass("Event");
-                eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
-                eventDiv.append($("<span>").addClass("EventTime" + ((start < now) ? " now" : "")).html(startString + endString));
-
-                roomDiv.append(eventDiv);
+                    roomDiv.append(eventDiv);
+                }
             });
 
             scheduleDiv.append(roomDiv);
