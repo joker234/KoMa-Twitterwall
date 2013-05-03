@@ -1,9 +1,10 @@
 $(document).ready(function() {
     console.log("Initializing Schedule");
 
-    $.getJSON("stundenplan.json?", function(data) {
+    $.getJSON("stundenplan.json", function(data) {
         renderSchedule(data);
     });
+    
 
     var intToDay = function(d) {
         switch (d) {
