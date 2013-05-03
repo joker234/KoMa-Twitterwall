@@ -55,6 +55,9 @@ $(document).ready(function() {
             var nextEvents = _.filter(room.Schedule, function(e,i) {
                 var end = new Date(e.EndTime);
                 var now = new Date();
+                console.log(now);
+                console.log(end);
+                console.log(now < end);
                 return now < end;
             });
 
