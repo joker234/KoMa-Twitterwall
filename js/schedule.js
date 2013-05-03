@@ -39,14 +39,14 @@ $(document).ready(function() {
                 var start = new Date(event.StartTime);
                 var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
                 var end = new Date(event.EndTime);
-                var endString = intToDay(end.getDay()) + " " + pad(end.getHours()) + ":" + pad(end.getMinutes());
+                var endString = " - " + pad(end.getHours()) + ":" + pad(end.getMinutes());
 
 
                 var eventDiv = $("<div>").addClass("Event");
                 eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
                 eventDiv.append($("<span>").addClass("EventEndTime").html(endString));
                 eventDiv.append($("<span>").addClass("EventStartTime").html(startString));
-                
+
                 roomDiv.append(eventDiv);
             });
 
