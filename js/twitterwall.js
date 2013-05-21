@@ -46,17 +46,18 @@ $(document).ready(function () {
         var date = new Date(tweet.created_at);
         var div = $("<div>").addClass("tweet well").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] <b>" + tweet.from_user + ":</b> " + tweet.text);
 
-        if (tweet.entities.media[0].type == "photo")
+        if (tweet.entities.media != null && tweet.entities.media[0].type == "photo")
         {
+            console.log("image!", tweet.text);
             var entity = tweet.entities.media[0];
             var image = $("<img />");
-            image.src = entity.media_url;
-            image.addClass("tweet-image")
+            image.attr("src",entity.media_url);
+            image.addClass("img-polaroid tweet-image")
             image.css({
                 width: entity.sizes.small.w,
-                height: eintity.sizes.small.h
+                height: entity.sizes.small.h
                 });
-            )
+            div.append(image);
         }
 
         div.hide();
