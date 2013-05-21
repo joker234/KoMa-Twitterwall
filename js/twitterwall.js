@@ -46,6 +46,19 @@ $(document).ready(function () {
         var date = new Date(tweet.created_at);
         var div = $("<div>").addClass("tweet well").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] <b>" + tweet.from_user + ":</b> " + tweet.text);
 
+        if (tweet.entities.media[0].type == "photo")
+        {
+            var entity = tweet.entities.media[0];
+            var image = $("<img />");
+            image.src = entity.media_url;
+            image.addClass("tweet-image")
+            image.css({
+                width: entity.sizes.small.w,
+                height: eintity.sizes.small.h
+                });
+            )
+        }
+
         div.hide();
         $("#tweets").prepend(div);
         div.slideDown(1000);
