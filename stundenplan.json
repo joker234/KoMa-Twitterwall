@@ -1,7 +1,13 @@
 [
   {
-    "RoomName": "Überall",
-    "RoomBuilding": "Kiel",
+    "RoomName": "Test",
+    "RoomBuilding": "Raum",
+    "Schedule": [
+    ]
+  },
+  {
+    "RoomName": "Kiel",
+    "RoomBuilding": "",
     "Schedule": [
       {
         "EventName": "Kulturtag",
@@ -28,12 +34,17 @@
       {
         "EventName": "Anfangsplenum",
         "StartTime": "2013-05-22T20:00+02:00",
-        "EndTime": "2013-05-22T23:59:00+02:00"
+        "EndTime": "2013-05-22T23:59+02:00"
       },
       {
         "EventName": "Zwischenplenum (KoMa)",
         "StartTime": "2013-05-23T21:00+02:00",
-        "EndTime": "2013-05-23T23:59:00+02:00"
+        "EndTime": "2013-05-23T23:59+02:00"
+      },
+      {
+        "EventName": "Abschlussplenum",
+        "StartTime": "2013-05-25T19:00+02:00",
+        "EndTime": "2013-05-25T23:59+02:00"
       }
     ]
   },

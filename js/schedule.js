@@ -5,18 +5,23 @@ $(document).ready(function() {
     var currentNews = -1;
 
     var fetch = function () {
-        $.getJSON("stundenplan.json", function(data) {
-            stuff = data;
+        $.getJSON("stundenplan.json", {
+                cache: false
+            }, function(data) {
+                stuff = data;
         });
-	$.getJSON("news.json", function(data) {
-            console.log("Newsupdate ", data.length);
-            if (news == null)
-            {
-                news = data;
-                changeNews();
-            } else {
-             news = data;
-            }
+
+	   $.getJSON("news.json", {
+                cache: false
+            }, function(data) {
+                console.log("Newsupdate ", data.length);
+                if (news == null)
+                {
+                    news = data;
+                    changeNews();
+                } else {
+                    news = data;
+                }
         });
     };
 
@@ -83,7 +88,14 @@ $(document).ready(function() {
 
         $.each(stuff, function (i, room) {
             var roomDiv = $("<div>").addClass("Room well");
-            roomDiv.append($("<h4>").addClass("RoomName").html(room.RoomName + " - " + room.RoomBuilding));
+
+            var roomName = room.RoomName;
+            if (room.RoomBuilding != "")
+            {
+                roomName = roomName + " - " + room.RoomBuilding;
+            }
+
+            roomDiv.append($("<h4>").addClass("RoomName").html(roomName));
 
             var nextEvents = _.filter(room.Schedule, function(e,i) {
                 var end = new Date(e.EndTime);
@@ -91,22 +103,25 @@ $(document).ready(function() {
                 return now < end;
             });
 
-            $.each(nextEvents, function (it, event) {
-                if (it < 3) {
-                    var start = new Date(event.StartTime);
-                    var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
-                    var end = new Date(event.EndTime);
-                    var endString = " - " + pad(end.getHours()) + ":" + pad(end.getMinutes());
+            if (nextEvents.length > 0)
+            {
+                $.each(nextEvents, function (it, event) {
+                    if (it < 3) {
+                        var start = new Date(event.StartTime);
+                        var startString = intToDay(start.getDay()) + " " + pad(start.getHours()) + ":" + pad(start.getMinutes());
+                        var end = new Date(event.EndTime);
+                        var endString = " - " + pad(end.getHours()) + ":" + pad(end.getMinutes());
 
-                    var eventDiv = $("<div>").addClass("Event");
-                    eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
-                    eventDiv.append($("<span>").addClass("EventTime" + ((start < now) ? " now" : "")).html(startString + endString));
+                        var eventDiv = $("<div>").addClass("Event");
+                        eventDiv.append($("<span>").addClass("EventTitle").html(event.EventName));
+                        eventDiv.append($("<span>").addClass("EventTime" + ((start < now) ? " now" : "")).html(startString + endString));
 
-                    roomDiv.append(eventDiv);
-                }
-            });
+                        roomDiv.append(eventDiv);
+                    }
+                });
 
-            scheduleDiv.append(roomDiv);
+                scheduleDiv.append(roomDiv);
+            }
         });
     };
     
