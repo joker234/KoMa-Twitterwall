@@ -1,19 +1,52 @@
 $(document).ready(function() {
 
     var stuff;
+    var news;
+    var currentNews = -1;
 
     var fetch = function () {
         $.getJSON("stundenplan.json", function(data) {
             stuff = data;
         });
+	$.getJSON("news.json", function(data) {
+            console.log("Newsupdate ", data.length);
+            if (news == null)
+            {
+                news = data;
+                changeNews();
+            } else {
+             news = data;
+            }
+        });
     };
+
     setInterval(function() {
                 renderSchedule();
             },1000);
     setInterval(function() {
                 fetch();
-            },60000);
+            },33000);
     fetch();
+    setInterval(function() {
+        changeNews();
+    }, 10000);
+
+
+    var changeNews = function() {
+        console.log("there are news: ", news.length);
+        newsPara = $("#news-data");
+        currentNews = (currentNews+1) % news.length;
+        var newNews = "<b>" + news[currentNews].author + "</b> | " +
+            news[currentNews].message;
+
+        newsPara.animate({
+            left: (window.innerWidth * -1) + "px"
+        },3000, function() {
+            newsPara.html(newNews);
+            newsPara.css("left", window.innerWidth + "px");
+            newsPara.animate({"left": (window.innerWidth/2) - (newsPara.width()/2)},3000);
+        });
+    };
     
 
     var intToDay = function(d) {
@@ -31,6 +64,8 @@ $(document).ready(function() {
         case 6:
             return "Samstag";
         case 7:
+            return "Sonntag";
+        case 0:
             return "Sonntag";
         default:
             return "Keintag(" + d + ")";

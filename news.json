@@ -1,10 +1,10 @@
 [
     {
-        author: "1favre",
-        message: "Testnews 1"
+        "author": "1favre",
+        "message": "Die Twitterwall mit Newsticker ;)"
     },
     {
-        author: "1favre",
-        message: "Testnews 2"
+        "author": "Orga",
+        "message": "Willkommen auf der KIF 41.0 / KOMA 72  in Kiel!"
     }
 ]

@@ -10,6 +10,33 @@
       }
     ]
   },
+    {
+    "RoomName": "LMS6",
+    "RoomBuilding": "R.11",
+    "Schedule": [
+      {
+        "EventName": "Ersti-AK",
+        "StartTime": "2013-05-22T19:00+02:00",
+        "EndTime": "2013-05-22T20:00+02:00"
+      }
+    ]
+  },
+      {
+    "RoomName": "OHP 5",
+    "RoomBuilding": "Hörsaal 1",
+    "Schedule": [
+      {
+        "EventName": "Anfangsplenum",
+        "StartTime": "2013-05-22T20:00+02:00",
+        "EndTime": "2013-05-22T23:59:00+02:00"
+      },
+      {
+        "EventName": "Zwischenplenum (KoMa)",
+        "StartTime": "2013-05-23T21:00+02:00",
+        "EndTime": "2013-05-23T23:59:00+02:00"
+      }
+    ]
+  },
   {
     "RoomName": "Mensa",
     "RoomBuilding": "Oben",
@@ -48,37 +75,6 @@
         "EventName": "NOM",
         "StartTime": "2013-05-24T16:00+02:00",
         "EndTime": "2013-05-24T23:59+02:00"
-      }
-    ]
-  },
-  {
-    "RoomName": "Raum1",
-    "RoomBuilding": "Haus2",
-    "Schedule": [
-      {
-        "EventName": "AK Filme gucken",
-        "StartTime": "2013-05-03T10:00+02:00",
-        "EndTime": "2013-05-03T12:00+02:00"
-      },
-      {
-        "EventName": "AK Faulenzen",
-        "StartTime": "2013-05-03T12:00+02:00",
-        "EndTime": "2013-05-03T14:00+02:00"
-      },
-      {
-        "EventName": "AK Furzen",
-        "StartTime": "2013-05-03T14:00+02:00",
-        "EndTime": "2013-05-03T16:00+02:00"
-      },
-      {
-        "EventName": "AK Guten Morgen",
-        "StartTime": "2013-05-03T16:00+02:00",
-        "EndTime": "2013-05-03T18:00+02:00"
-      },
-      {
-        "EventName": "AK Frühstück",
-        "StartTime": "2013-05-03T18:00+02:00",
-        "EndTime": "2013-05-03T20:00+02:00"
       }
     ]
   }
