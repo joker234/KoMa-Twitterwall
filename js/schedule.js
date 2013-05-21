@@ -34,7 +34,7 @@ $(document).ready(function() {
     fetch();
     setInterval(function() {
         changeNews();
-    }, 10000);
+    }, 25000);
 
 
     var changeNews = function() {
@@ -46,10 +46,10 @@ $(document).ready(function() {
 
         newsPara.animate({
             left: (window.innerWidth * -1) + "px"
-        },3000, function() {
+        },7500, function() {
             newsPara.html(newNews);
             newsPara.css("left", window.innerWidth + "px");
-            newsPara.animate({"left": (window.innerWidth/2) - (newsPara.width()/2)},3000);
+            newsPara.animate({"left": (window.innerWidth/2) - (newsPara.width()/2)},7500);
         });
     };
     
