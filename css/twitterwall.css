@@ -5,10 +5,10 @@
 	margin-top: 10px;
 	margin-left: 10px;
 }
-html {
+/*html {
 	overflow: hidden;
 	cursor: none;
-}
+}*/
 .tweet-image {
 	display: block;
 	margin-left: auto;
