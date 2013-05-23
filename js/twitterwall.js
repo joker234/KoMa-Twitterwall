@@ -44,11 +44,20 @@ $(document).ready(function () {
 
     var render = function (tweet) {
         var date = new Date(tweet.created_at);
-        var div = $("<div>").addClass("tweet well").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] <b>" + tweet.from_user + ":</b> " + tweet.text);
+        var div = $("<div>").addClass("tweet well")
+
+        var tweettext = $("<span>").addClass("tweet-text").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] <b>" + tweet.from_user + ":</b> " + tweet.text);
+
+        var profileImage = $("<img />")
+        profileImage.attr("src",tweet.profile_image_url);
+
+        profileImage.addClass("img-polaroid profile-image");
+
+        div.append(profileImage);
+        div.append(tweettext);
 
         if (tweet.entities.media != null && tweet.entities.media[0].type == "photo")
         {
-            console.log("image!", tweet.text);
             var entity = tweet.entities.media[0];
             var image = $("<img />");
             image.attr("src",entity.media_url);
