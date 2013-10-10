@@ -33,7 +33,7 @@
 .Time {
 	text-align: center;
 	font-size: 50px;
-	height: 25px;
+	/*height: 25px;*/
 }
 
 #news {
@@ -42,7 +42,7 @@
   white-space: nowrap;
   overflow: hidden;
   margin-top: 5px;
-} 
+}
 
 #news-data {
   position: relative;
