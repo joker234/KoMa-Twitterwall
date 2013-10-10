@@ -6,7 +6,7 @@ function pad(num) {
 
 $(document).ready(function () {
 
-    var baseURL = "http://search.twitter.com/search.json";
+    var baseURL = "http://api.twitter.com/1.1/search/tweets.json";
 
     var refreshURL;
 
