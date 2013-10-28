@@ -5,30 +5,26 @@
 	margin-top: 10px;
 	margin-left: 10px;
 }
-/*html {
+html {
 	overflow: hidden;
-	cursor: none;
-}*/
+	/*cursor: none;*/
+}
 .tweet-image {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-        margin-top: 40px;
+        margin-top: 10px;
+        height: 200px;
 }
 #tweets .well {
 	margin-bottom: 5px;
-        padding: 10px 19px;
+        padding: 10px 10px 10px 50px;
         position: relative;
-        min-height: 40px;
+        min-height: 60px;
 }
 .profile-image {
 	position: absolute;
-	top: 5px;
+	top: 10px;
 	left: 5px;
 	height: 40px;
-}
-.tweet-text {
-	position: absolute;
-	top: 5px;
-	left: 60px;
 }

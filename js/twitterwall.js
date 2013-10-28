@@ -6,7 +6,7 @@ function pad(num) {
 
 $(document).ready(function () {
 
-    var baseURL = "http://api.twitter.com/1.1/search/tweets.json";
+    var baseURL = "http://1favre.de/wall/search.php";
 
     var refreshURL;
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
         update();
 
-        setInterval(update, 10000);
+        setInterval(update, 20000);
 
     };
 
@@ -31,12 +31,13 @@ $(document).ready(function () {
         $.getJSON(baseURL + refreshURL + "&callback=?", {
             cache: false
         }, function (data) {
-            
+           
+            console.log(data); 
 
-            refreshURL = data.refresh_url;
+            refreshURL = data.search_metadata.refresh_url;
 
 
-            $.each(data.results.reverse(), function(i, e) {
+            $.each(data.statuses.reverse(), function(i, e) {
                 render(e);
             });
         });
@@ -46,10 +47,10 @@ $(document).ready(function () {
         var date = new Date(tweet.created_at);
         var div = $("<div>").addClass("tweet well")
 
-        var tweettext = $("<span>").addClass("tweet-text").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] <b>" + tweet.from_user + ":</b> " + tweet.text);
+        var tweettext = $("<span>").addClass("tweet-text").html("[" + pad(date.getHours()) + ":" + pad(date.getMinutes()) + "] <b>" + tweet.user.screen_name + ":</b> " + tweet.text);
 
         var profileImage = $("<img />")
-        profileImage.attr("src",tweet.profile_image_url);
+        profileImage.attr("src",tweet.user.profile_image_url);
 
         profileImage.addClass("img-polaroid profile-image");
 
